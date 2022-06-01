@@ -30,16 +30,8 @@
 		const cmdInput = document.querySelector("#cmd-input")
 		const ctx = canvas.getContext("2d")
 		const commands = []
-		const extent=360
-		const step=360
-
 		cmdForm.addEventListener('submit',runCommand)
 		runCommand()
-		ctx.rotate(Math.PI/2)
-		for (var i = 0; i < 360; i++) {
-			circle(i)
-			ctx.rotate(-Math.PI/180)
-			}
 		function runCommand(e){
 			if (e) {
 				e.preventDefault()
